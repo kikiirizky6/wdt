@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastique - Plastic Bottle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/botol.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#3B82F6',
+                        'secondary-blue': '#60A5FA',
+                        'dark-overlay': 'rgba(0, 0, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-[Inter]">
+    <header class="absolute top-0 left-0 w-full z-10 py-4">
+        <div class="w-full flex justify-between items-center px-4">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 border-2 border-white rounded-full">
+                    <span class="text-white font-extrabold text-xl">P</span>
+                </div>
+                <div class="text-white text-left">
+                    <h1 class="text-3xl font-black tracking-wider uppercase">Plastique</h1>
+                    <p class="text-xs font-light tracking-widest uppercase -mt-1">Cleaner. Happier World</p>
+                </div>
+            </div>
+
+
+             <nav class="hidden lg:flex items-center space-x-8 text-white font-semibold uppercase text-sm">
+                <a href="index.html" class="hover:bg-gray-100 hover:text-primary-blue transition duration-300 p-2">HOME</a>
+                <a href="sampah_upn.html" class="hover:bg-gray-100 hover:text-primary-blue transition duration-300 p-2">Plastic Trash Can UPN</a>
+                <a href="produk.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-primary-blue transition duration-150">Products</a>
+    
+                <div class="relative group">
+                    <button class="flex items-center hover:bg-gray-100 transition duration-300 p-2 focus:outline-none">
+                        <a href="menu.html" class="hover:text-primary-blue transition duration-300 p-2">Types of Plastics</a>
+                        <svg class="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
+                            fill="none" stroke="currentColor" viewBox="0 0 28 28">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+        
+                    <div class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition">
+                        <a href="botol.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-150">Plastic Bottle</a>
+                        <a href="kresek.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-150">Plastic Bag</a>
+                        <a href="sterofoam.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-150">Styrofoam</a>
+                    </div>
+                </div>
+            </nav>
+
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark-overlay mt-4 p-4 rounded-lg shadow-lg text-white font-semibold uppercase text-sm">
+            <a href="index.html" class="block py-2 hover:bg-white hover:text-dark-overlay rounded-md px-3 transition duration-150">HOME</a>
+            <a href="sampah_upn.html" class="block py-2 hover:bg-white hover:text-dark-overlay rounded-md px-3 transition duration-150">Sampah UPN</a>
+
+            <div class="py-2">
+                <button id="mobile-dropdown-toggle" class="flex items-center justify-between w-full py-2 hover:bg-white hover:text-dark-overlay rounded-md px-3 transition duration-150 focus:outline-none">
+                    <a href="menu.html" class="hover:text-primary-blue transition duration-300 p-2">Types of Plastics</a>
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div id="mobile-dropdown-menu" class="hidden pl-4 mt-1 bg-dark-overlay/80 rounded-b-lg">
+                    <a href="botol.html" class="block px-4 py-2 hover:bg-white/90 hover:text-dark-overlay transition duration-150 rounded-md">Plastic Bottle</a>
+                    <a href="kresek.html" class="block px-4 py-2 hover:bg-white/90 hover:text-dark-overlay transition duration-150 rounded-md">Plastic Bag</a>
+                    <a href="sterofoam.html" class="block px-4 py-2 hover:bg-white/90 hover:text-dark-overlay transition duration-150 rounded-md">Styrofoam</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-primary-blue h-[60vh] flex items-center justify-center relative overflow-hidden">
+            <div class="text-center text-white z-10 p-4">
+                <h2 class="text-6xl md:text-8xl font-black uppercase mb-4 tracking-wider">Styrofoam</h2>
+                <p class="text-xl md:text-2xl font-semibold opacity-90">Discover the impact and creativity of Styrofoam</p>
+            </div>
+        </section>
+
+        <section class="slanted-blue-bg pt-20 pb-20 relative main-blue-bg">
+            <div class="relative z-20 max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
+                <div class="pt-10 lg:sticky lg:top-28">
+                    <h3 class="text-6xl font-black text-white mb-6 leading-tight relative">
+                        Fun Facts
+                        <span class="block w-20 h-1 bg-white absolute bottom-0 left-0"></span>
+                    </h3>
+                    <div class="overflow-hidden rounded-lg shadow-xl mb-6">
+                        <img src="assets/image/sterofoam.jpeg" alt="A pile of plastic bottles and caps" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-2xl font-bold text-white mb-4">Fun Fact :</h4>
+                    <div class="space-y-4">
+                        <div class="bg-primary-blue p-4 rounded-lg shadow-md text-white font-medium flex items-start space-x-3">
+                            <span class="font-extrabold text-xl">1.</span>
+                            <span>Styrofoam is made up of about 95–98% air, which makes it super lightweight</span>
+                        </div>
+                        <div class="bg-primary-blue p-4 rounded-lg shadow-md text-white font-medium flex items-start space-x-3">
+                            <span class="font-extrabold text-xl">2.</span>
+                            <span>It’s not biodegradable — and can persist in the environment for hundreds of years</span>
+                        </div>
+                        <div class="bg-primary-blue p-4 rounded-lg shadow-md text-white font-medium flex items-start space-x-3">
+                            <span class="font-extrabold text-xl">3.</span>
+                            <span>Tiny styrofoam pieces (microplastics) are often eaten by fish, entering the food chain</span>
+                        </div>
+                        <div class="bg-primary-blue p-4 rounded-lg shadow-md text-white font-medium flex items-start space-x-3">
+                            <span class="font-extrabold text-xl">4.</span>
+                            <span>Although hard to recycle, some companies now use compactors to turn it into building materials.</span>
+                        </div>
+                        <div class="bg-primary-blue p-4 rounded-lg shadow-md text-white font-medium flex items-start space-x-3">
+                            <span class="font-extrabold text-xl">5.</span>
+                            <span>Styrofoam dissolves easily in acetone, showing that it’s mostly trapped air and polymer!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="craft-blue-bg relative pt-12 pb-20">
+            <div class="relative z-10 max-w-6xl mx-auto px-4">
+                <h3 class="text-4xl font-black text-center mb-12 relative pb-2">
+                    Craft Ideas
+                    <span class="block w-20 h-1 bg-primary-blue absolute bottom-0 left-1/2 transform -translate-x-1/2"></span>
+                </h3>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <a href="https://youtu.be/o0APRNVM2Ec?si=z0qhg6t_ynnuh3BX" target="_blank">
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="h-64 overflow-hidden">
+                            <img src="assets/image/stero12.png" alt="A robot made from plastic bottles" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="bg-primary-blue text-center text-white py-3 font-semibold text-lg">
+                            Flower Sterofoam
+                        </div>
+                    </div>
+                </a>
+                <a href="https://youtube.com/shorts/eYbo_FP1KIM?si=5pACjsa1zuM59DzG" target="_blank">
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="h-64 overflow-hidden">
+                            <img src="assets/image/stero2.png" alt="Hanging lamps made from plastic bottle bottoms" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="bg-primary-blue text-center text-white py-3 font-semibold text-lg">
+                            Wall Hanging Decoration
+                        </div>
+                    </div>
+                </a>
+
+                    <a href="https://workshop88-pro.com/seni-kreasi-kerajinan-pahat-decor-patung-sterofoam-styrofoam-gabus-dan-pemanfaatan-untuk-dekorasi-di-surabaya/" target="_blank">
+                        <div class="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 cursor-pointer">
+                            <div class="h-64 overflow-hidden">
+                                <img src="assets/image/stero2.jpeg" alt="Pencil case made from a plastic bottle" class="w-full h-full object-cover object-left">
+                            </div>
+                            <div class="bg-primary-blue text-center text-white py-3 font-semibold text-lg">
+                                Shuttlecock
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDropdownToggle = document.getElementById('mobile-dropdown-toggle');
+        const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileDropdownToggle.addEventListener('click', () => {
+            mobileDropdownMenu.classList.toggle('hidden');
+        });
+
+        const desktopDropdown = document.querySelector(".dropdown-hover");
+        const desktopBtn = desktopDropdown.querySelector("button");
+
+        desktopBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            desktopDropdown.classList.toggle("dropdown-open");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!desktopDropdown.contains(event.target)) {
+                desktopDropdown.classList.remove("dropdown-open");
+            }
+        });
+    </script>
+</body>
+</html>

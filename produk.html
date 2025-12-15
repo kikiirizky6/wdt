@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Sampah Plastik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sampah.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#3B82F6',
+                        'dark-overlay': 'rgba(0, 0, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="absolute top-0 left-0 w-full z-10 py-4">
+        <div class="w-full flex justify-between items-center px-4">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 border-2 border-white rounded-full">
+                    <span class="text-white font-extrabold text-xl">P</span>
+                </div>
+                <div class="text-white text-left">
+                    <h1 class="text-3xl font-black tracking-wider uppercase">Plastique</h1>
+                    <p class="text-xs font-light tracking-widest uppercase -mt-1">Cleaner. Happier World</p>
+                </div>
+            </div>
+
+
+            <nav class="hidden lg:flex items-center space-x-8 text-white font-semibold uppercase text-sm">
+                <a href="index.html" class="hover:text-primary-blue transition duration-300 p-2">HOME</a>
+                <a href="sampah_upn.html" class="hover:text-primary-blue transition duration-300 p-2">Plastic Trash Can UPN</a>
+                <a href="produk.html" class="block px-4 py-2 hover:text-primary-blue transition duration-150">Products</a>
+    
+                <div class="relative group">
+                    <button class="flex items-center hover:text-primary-blue transition duration-300 p-2 focus:outline-none">
+                        <span>Types of Plastic</span>
+                        <svg class="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+        
+                    <div class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition">
+                        <a href="botol.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-150">Plastic Bottle</a>
+                        <a href="kresek.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-150">Plastic Bag</a>
+                        <a href="sterofoam.html" class="block px-4 py-2 hover:bg-gray-100 transition duration-150">Styrofoam</a>
+                    </div>
+                </div>
+            </nav>
+
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark-overlay mt-4 p-4 rounded-lg shadow-lg text-white font-semibold uppercase text-sm">
+            <a href="index.html" class="block py-2 hover:bg-white hover:text-dark-overlay rounded-md px-3 transition duration-150">HOME</a>
+            <a href="sampah_upn.html" class="block py-2 hover:bg-white hover:text-dark-overlay rounded-md px-3 transition duration-150">Sampah UPN</a>
+
+            <div class="py-2">
+                <button id="mobile-dropdown-toggle" class="flex items-center justify-between w-full py-2 hover:bg-white hover:text-dark-overlay rounded-md px-3 transition duration-150 focus:outline-none">
+                    <span>Types of Plastic</span>
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 28 28">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div id="mobile-dropdown-menu" class="hidden pl-4 mt-1 bg-dark-overlay/80 rounded-b-lg">
+                    <a href="botol.html" class="block px-4 py-2 hover:bg-white/90 hover:text-dark-overlay transition duration-150 rounded-md">Plastic Bottle</a>
+                    <a href="kresek.html" class="block px-4 py-2 hover:bg-white/90 hover:text-dark-overlay transition duration-150 rounded-md">Plastic Bag</a>
+                    <a href="sterofoam.html" class="block px-4 py-2 hover:bg-white/90 hover:text-dark-overlay transition duration-150 rounded-md">Styrofoam</a>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+    <section class="plastic-types-section">
+    <h3>Products</h3>
+    <div class="card-grid">
+        <!-- Card 1 -->
+        <a href="#" class="plastic-card" data-popup-id="popup1" style="text-decoration:none; color:inherit;">
+            <div class="card-image-container">
+                <img src="https://cleopurewater.com/blog/wp-content/uploads/2023/07/2-Flowers-from-Plastic-Bottle-_-Best-Out-Of-Waste-_-2-Bunga-Hias-dari-Botol-Plastik.jpeg" 
+                     alt="Kumpulan botol plastik bekas" class="card-image" />
+            </div>
+            <div class="card-content">Flower Plastic Vase</div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="plastic-card" data-popup-id="popup2" style="text-decoration:none; color:inherit;">
+            <div class="card-image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9G59c244pCswGvmlJ8yPmJZ5yQXM7tgwQ7Q&s" 
+                     alt="Berbagai kantong plastik warna-warni" class="card-image" />
+            </div>
+            <div class="card-content">Totebag anyaman kantong plastik</div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="plastic-card" data-popup-id="popup3" style="text-decoration:none; color:inherit;">
+            <div class="card-image-container">
+                <img src="assets/image/stero12.png" 
+                     alt="Wadah makanan dan gelas Styrofoam" class="card-image" />
+            </div>
+            <div class="card-content">Bunga styrofoam</div>
+
+            
+        </a>
+    </div>
+
+    <!-- Tombol More About Us -->
+    <div class="flex justify-center mt-8">
+        <a href="#">
+            <button id="explore-btn" class="px-8 py-4 bg-primary-blue text-white font-bold uppercase tracking-wider rounded-xl shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                Jual Produk Anda
+            </button>
+        </a>
+    </div>
+</section>
+
+<!-- Modal Jual Produk -->
+
+<div id="jual-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-4 overflow-y-auto max-h-[80vh] relative">
+        <button id="close-jual-modal" class="text-black text-3xl font-bold absolute top-3 right-4 hover:text-gray-500">&times;</button>
+        <h2 class="text-xl font-bold mb-4">Jual Produk Anda</h2>
+        <form id="jual-form" class="space-y-4">
+            <!-- Input Gambar Produk -->
+            <div>
+                <label class="block font-medium mb-1">Gambar Produk</label>
+                <input type="file" id="product-image" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2">
+                <!-- Preview Gambar -->
+                <img id="image-preview" class="mt-2 max-h-48 rounded hidden" alt="Preview Gambar Produk">
+            </div>
+
+            <div>
+                <label class="block font-medium mb-1">Nama Produk</label>
+                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan nama produk">
+            </div>
+            <div>
+                <label class="block font-medium mb-1">Deskripsi Produk</label>
+                <textarea class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Deskripsi singkat produk"></textarea>
+            </div>
+            <div>
+                <label class="block font-medium mb-1">Harga Produk</label>
+                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Rp">
+            </div>
+            <div>
+                <label class="block font-medium mb-1">Kontak(sertakan nama)</label>
+                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Nomor WhatsApp / Telepon">
+            </div>
+            <button type="submit" class="w-full bg-primary-blue text-white py-2 rounded font-bold hover:bg-blue-600 transition">Kirim</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Info Produk -->
+<div id="info-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-4 overflow-y-auto max-h-[80vh] relative animate-fadeIn">
+        <!-- Tombol tutup modal -->
+        <button id="close-modal" class="text-black text-3xl font-bold absolute top-3 right-4 hover:text-gray-500">&times;</button>
+        <h2 class="text-2xl font-bold mb-4">Detail Produk</h2>
+        <div id="modal-content" class="space-y-4">
+            <!-- Konten popup akan di-inject dari JS -->
+        </div>
+    </div>
+</div>
+
+<!-- Tailwind animasi sederhana -->
+<style>
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(-10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+    .animate-fadeIn {
+        animation: fadeIn 0.3s ease-out;
+    }
+</style>
+
+</body>
+<script>
+    const modal = document.getElementById('info-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const modalContent = document.getElementById('modal-content');
+
+    // Data untuk semua pop-up
+    const popupData = {
+        popup1: [
+            "Nama Produk: Flower Plastic Vase",
+            "Deskripsi Produk: Vas bunga beserta dengan bunga yang keduanya terbuat dari sampah Plastik Botol",
+            "Harga Produk: Rp 30.000",
+            "Kontak Penjual: +62 8146-4542"
+        ],
+        popup2: [
+            "Nama Produk: Totebag anyaman kantong plastik",
+            "Deskripsi Produk: Tas anyaman yang terbuat dari kantong plastik bekas daur ulang",
+            "Harga Produk: Rp 45.000",
+            "Kontak Penjual: +62 8123-5678"
+        ],
+        popup3: [
+            "Nama Produk: Bunga styrofoam",
+            "Deskripsi Produk: Bunga hias yang terbuat dari styrofoam bekas daur ulang",
+            "Harga Produk: Rp 25.000",
+            "Kontak Penjual: +62 8134-9876"
+        ]
+    };
+
+    function createPopupItem(number, text) {
+        const div = document.createElement('div');
+        div.className = "bg-primary-blue p-4 rounded-lg shadow-md text-white font-medium flex items-start space-x-3 mb-4";
+        div.innerHTML = `<span class="font-extrabold text-xl">${number}.</span><span>${text}</span>`;
+        return div;
+    }
+
+    // Event listener untuk semua card
+    document.querySelectorAll('.plastic-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const id = card.getAttribute('data-popup-id');
+            modalContent.innerHTML = '';
+            if (popupData[id]) {
+                popupData[id].forEach((text, idx) => {
+                    modalContent.appendChild(createPopupItem(idx + 1, text));
+                });
+            }
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal){
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    });
+</script>
+
+<script>
+    const jualModal = document.getElementById('jual-modal');
+    const closeJualModal = document.getElementById('close-jual-modal');
+    const jualBtn = document.getElementById('explore-btn');
+
+    // Tombol buka modal
+    jualBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        jualModal.classList.remove('hidden');
+        jualModal.classList.add('flex');
+    });
+
+    // Tombol tutup modal
+    closeJualModal.addEventListener('click', () => {
+        jualModal.classList.add('hidden');
+        jualModal.classList.remove('flex');
+    });
+
+    // Tutup modal jika klik di luar konten
+    jualModal.addEventListener('click', (e) => {
+        if(e.target === jualModal){
+            jualModal.classList.add('hidden');
+            jualModal.classList.remove('flex');
+        }
+    });
+
+    // Opsional: submit form
+    const jualForm = document.getElementById('jual-form');
+    jualForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Form berhasil dikirim! (kamu bisa ganti ini dengan logic kirim data)');
+        jualModal.classList.add('hidden');
+        jualModal.classList.remove('flex');
+        jualForm.reset();
+    });
+    // Preview gambar saat input file dipilih
+const productImageInput = document.getElementById('product-image');
+const imagePreview = document.getElementById('image-preview');
+
+productImageInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            imagePreview.src = event.target.result;
+            imagePreview.classList.remove('hidden');
+        };
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.src = '';
+        imagePreview.classList.add('hidden');
+    }
+});
+
+</script>
